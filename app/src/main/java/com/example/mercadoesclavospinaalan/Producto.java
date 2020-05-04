@@ -1,3 +1,5 @@
+package com.example.mercadoesclavospinaalan;
+
 public class Producto {
     private String nombre;
     private Integer precio;
