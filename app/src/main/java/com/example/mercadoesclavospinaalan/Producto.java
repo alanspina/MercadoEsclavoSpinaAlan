@@ -11,8 +11,6 @@ public class Producto {
         this.imagen = imagen;
     }
 
-    public Producto(String celulariphone10, int celulariphone101) {
-    }
 
     public String getNombre() {
         return nombre;

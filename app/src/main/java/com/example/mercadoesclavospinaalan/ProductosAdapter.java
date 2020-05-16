@@ -42,7 +42,7 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.View
     protected class ViewHolderProducto extends RecyclerView.ViewHolder{
         private ImageView imageViewProducto;
         private TextView textViewNombreProducto;
-        private TextView textViewPrecioProducto;
+        //private TextView textViewPrecioProducto;
 
         public ViewHolderProducto(@NonNull View itemView) {
             super(itemView);
@@ -53,7 +53,7 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.View
         public void onBind(Producto producto) {
             imageViewProducto.setImageResource(producto.getImagen());
             textViewNombreProducto.setText(producto.getNombre());
-            textViewPrecioProducto.setText(producto.getPrecio());
+            //textViewPrecioProducto.setText(producto.getPrecio());
 
         }
     }

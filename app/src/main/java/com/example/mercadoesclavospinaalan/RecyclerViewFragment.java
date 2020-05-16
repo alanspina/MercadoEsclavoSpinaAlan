@@ -28,11 +28,13 @@ public class RecyclerViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recycler_view, container, false);
-
+        //declaro las variables que necesito
         RecyclerView recyclerViewProductos = view.findViewById(R.id.fragmentRecyclerViewRecyclerView);
         List<Producto> productoList = ProveedorDeProductos.getProductos();
         ProductosAdapter productosAdapter = new ProductosAdapter(productoList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false);
+
+        //activo
         recyclerViewProductos.setLayoutManager(linearLayoutManager);
         recyclerViewProductos.setAdapter(productosAdapter);
 
