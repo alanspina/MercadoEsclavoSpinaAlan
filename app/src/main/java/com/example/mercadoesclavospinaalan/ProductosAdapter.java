@@ -8,15 +8,23 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.mercadoesclavospinaalan.POJO.Product;
 
 import java.util.List;
 
 public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolderProducto> {
 
-    private List<Producto> listaDeProductos;
+    private List<Product> listaDeProductos;
+    private List<Product> productList;
 
-    public ProductosAdapter(List<Producto> listaDeProductos) {
+    public ProductosAdapter(List<Product> listaDeProductos) {
         this.listaDeProductos = listaDeProductos;
+    }
+
+
+    public void refreshProduct(List<Product> productList){
+        this.productList = productList;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -30,7 +38,7 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderProducto holder, int position) {
-        Producto producto = this.listaDeProductos.get(position);
+        Product producto = this.listaDeProductos.get(position);
         holder.onBind(producto);
     }
 
@@ -50,9 +58,9 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.View
             textViewNombreProducto = itemView.findViewById(R.id.celdaProductoNombreProducto);
         }
 
-        public void onBind(Producto producto) {
-            imageViewProducto.setImageResource(producto.getImagen());
-            textViewNombreProducto.setText(producto.getNombre());
+        public void onBind(Product producto) {
+            //imageViewProducto.setImageResource(producto.getThumbnail());
+            textViewNombreProducto.setText(producto.getTitle());
             //textViewPrecioProducto.setText(producto.getPrecio());
 
         }

@@ -10,15 +10,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+import com.example.mercadoesclavospinaalan.Controller.ProductController;
+import com.example.mercadoesclavospinaalan.Model.ProductContainer;
+import com.example.mercadoesclavospinaalan.POJO.Product;
+import com.example.mercadoesclavospinaalan.Util.ResultListener;
+
 import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RecyclerViewFragment extends Fragment {
+public class RecyclerViewProductos extends Fragment {
 
-    public RecyclerViewFragment() {
+    private ProductosAdapter productosAdapter;
+
+    public RecyclerViewProductos() {
         // Required empty public constructor
     }
 
@@ -30,14 +38,21 @@ public class RecyclerViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recycler_view, container, false);
         //declaro las variables que necesito
         RecyclerView recyclerViewProductos = view.findViewById(R.id.fragmentRecyclerViewRecyclerView);
-        List<Producto> productoList = ProveedorDeProductos.getProductos();
-        ProductosAdapter productosAdapter = new ProductosAdapter(productoList);
+        //ACA LE TENGO QUE DAR LOS DATOS QUE VIENEN DEL CONTROLLER.
+
+//magia del juli
+        Bundle bundle = getArguments();
+        ProductContainer productContainer = (ProductContainer) bundle.getSerializable("resultado");
+        List<Product> productList = productContainer.getResults();
+        ProductosAdapter productosAdapter = new ProductosAdapter(productList);
+        //magia del juli
+
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false);
 
         //activo
         recyclerViewProductos.setLayoutManager(linearLayoutManager);
         recyclerViewProductos.setAdapter(productosAdapter);
-
         return view;
     }
 }
