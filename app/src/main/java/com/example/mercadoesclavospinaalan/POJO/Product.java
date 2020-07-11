@@ -53,9 +53,9 @@ public class Product implements Serializable {
         this.condition = condition;
     }
 
-    /*public int getThumbnail() {
+    public String getThumbnail() {
         return thumbnail;
-    }*/
+    }
 
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;

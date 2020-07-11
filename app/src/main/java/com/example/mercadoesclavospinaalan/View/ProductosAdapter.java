@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 import com.example.mercadoesclavospinaalan.POJO.Product;
 import com.example.mercadoesclavospinaalan.R;
 
@@ -51,19 +53,19 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.View
     protected class ViewHolderProducto extends RecyclerView.ViewHolder{
         private ImageView imageViewProducto;
         private TextView textViewNombreProducto;
-        //private TextView textViewPrecioProducto;
+        private TextView textViewPrecioProducto;
 
         public ViewHolderProducto(@NonNull View itemView) {
             super(itemView);
             imageViewProducto = itemView.findViewById(R.id.celdaProductoImagenProducto);
             textViewNombreProducto = itemView.findViewById(R.id.celdaProductoNombreProducto);
+            textViewPrecioProducto = itemView.findViewById(R.id.celdaProductoPrecio);
         }
 
         public void onBind(Product producto) {
-            //imageViewProducto.setImageResource(producto.getThumbnail());
+            Glide.with(imageViewProducto).load(producto.getThumbnail()).error(R.drawable.ic_launcher_foreground).into(imageViewProducto);
             textViewNombreProducto.setText(producto.getTitle());
-            //textViewPrecioProducto.setText(producto.getPrecio());
-
+            textViewPrecioProducto.setText(producto.getPrice().toString());
         }
     }
 
