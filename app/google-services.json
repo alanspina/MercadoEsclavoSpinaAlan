@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "106761212339",
+    "firebase_url": "https://mercadoesclavospinaalan.firebaseio.com",
+    "project_id": "mercadoesclavospinaalan",
+    "storage_bucket": "mercadoesclavospinaalan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106761212339:android:74a7b8388ab17e474b3bc6",
+        "android_client_info": {
+          "package_name": "com.example.mercadoesclavospinaalan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106761212339-f7puopc0akesmrheovfqf6qch9trallu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mercadoesclavospinaalan",
+            "certificate_hash": "4bf031f268032bb7656e787efd8d754f40615d7f"
+          }
+        },
+        {
+          "client_id": "106761212339-35cud3tgs0drdpajcq161jl9f1kkj87n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ7Kzzrk5aA-A9VMyW1MxpuOQ--JWfPz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106761212339-sn74t7s6qafsgi3ifsp8l9aqqcftabon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

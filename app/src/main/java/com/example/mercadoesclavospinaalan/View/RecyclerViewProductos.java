@@ -1,4 +1,4 @@
-package com.example.mercadoesclavospinaalan;
+package com.example.mercadoesclavospinaalan.View;
 
 import android.os.Bundle;
 
@@ -11,10 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.example.mercadoesclavospinaalan.Controller.ProductController;
 import com.example.mercadoesclavospinaalan.Model.ProductContainer;
 import com.example.mercadoesclavospinaalan.POJO.Product;
-import com.example.mercadoesclavospinaalan.Util.ResultListener;
+import com.example.mercadoesclavospinaalan.R;
 
 import java.util.List;
 
